@@ -14,9 +14,18 @@
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
-        </div>
-            
+        </div>            
         @endif
+        @if (Session::get('success'))
+        <div class="alert alert-success">
+            {{Session::get('success')}}
+
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>            
+        @endif
+         
         <div class="input-group custom">
             <input type="text" class="form-control form-control-lg" name="login_id" placeholder="Email/Username" value="{{ old('login_id') }}">
             <div class="input-group-append custom">
@@ -46,7 +55,7 @@
             </div>
             <div class="col-6">
                 <div class="forgot-password">
-                    <a href="forgot-password.html">Forgot Password</a>
+                    <a href="{{route('admin.forgot-password')}}">Forgot Password</a>
                 </div>
             </div>
         </div>

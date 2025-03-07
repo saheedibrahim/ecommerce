@@ -45,6 +45,7 @@
 		/>
 		<link rel="stylesheet" type="text/css" href="/back/vendors/styles/style.css" />
 
+		@livewireStyles
         @stack('stylesheets')
 	</head>
 	<body class="login-page">
@@ -59,7 +60,9 @@
 				</div>
 				<div class="login-menu">
 					<ul>
-						<li><a href="register.html">Register</a></li>
+						@if( !Route::is('admin.*'))
+							<li><a href="register.html">Register</a></li>
+						@endif
 					</ul>
 				</div>
 			</div>
@@ -85,6 +88,16 @@
 		<script src="/back/vendors/scripts/process.js"></script>
 		<script src="/back/vendors/scripts/layout-settings.js"></script>
 
+		<script>
+		if (navigator.userAgent.indexOf("Firefox") != -1) {
+			history.pushState(null, null, document.URL);
+			window.addEventListener('popstate', function (params) {
+				history.pushState(null, null, document.URL);
+			})
+		}
+		</script>
+
+		@livewireScripts
         @stack('scripts')
 	</body>
 </html>
