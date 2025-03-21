@@ -17,7 +17,7 @@ class AdminSellerHeaderProfileInfo extends Component
 
     public function mount(){
         if(Auth::guard('admin')->check()){
-            $this->admin = Admin::findOrFail(Auth::id());
+            $this->admin = Admin::findOrFail(auth()->id());
         }
     }
     
