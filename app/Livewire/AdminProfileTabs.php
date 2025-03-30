@@ -55,13 +55,6 @@ class AdminProfileTabs extends Component
             $this->showToastr('success', 'Your personal details have been successfully updated.');
     }
 
-    public function showToastr($type, $message){
-        return $this->dispatchBrowserEvent('showToastr', [
-            'type' => $type,
-            'message' => $message,
-        ]);
-    }
-
     public function updatePassword(){
         $this->validate([
             'current_password' => [
@@ -98,12 +91,22 @@ class AdminProfileTabs extends Component
             );
     
             sendEmail($mailConfig);
+
             $this->current_password = $this->new_password = $this->new_password_confirmation = null;
-            $this->showToastr('success', 'Password successfully changed');
+            alert('Password successfully changed');
+            // $this->showToastr('success', 'Password successfully changed');
         } else {
-            $this->showToastr('error', 'Something went wrong');
+            alert('Something went wrong');
+            // $this->showToastr('error', 'Something went wrong');
         }
     }
+
+    // public function showToastr($type, $message){
+    //     return $this->dispatchBrowserEvent('showToastr', [
+    //         'type' => $type,
+    //         'message' => $message,
+    //     ]);
+    // }
 
     public function render()
     {

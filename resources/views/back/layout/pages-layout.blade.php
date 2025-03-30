@@ -7,22 +7,12 @@
 		<title>@yield('pageTitle')</title>
 
 		<!-- Site favicon -->
-		<link
-			rel="apple-touch-icon"
-			sizes="180x180"
-			href="/back/vendors/images/apple-touch-icon.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="/back/vendors/images/favicon-32x32.png"
-		/>
+		
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="16x16"
-			href="/back/vendors/images/favicon-16x16.png"
+			href="images/site/{{ get_settings()->site_favicon }}"
 		/>
 
 		<!-- Mobile Specific Metas -->
@@ -418,10 +408,10 @@
 
 		<div class="left-side-bar">
 			<div class="brand-logo">
-				<a href="index.html">
-					<img src="/back/vendors/images/deskapp-logo.svg" alt="" class="dark-logo" />
+				<a href="/">
+					<img src="/images/site/{{ get_settings()->site_logo }}" alt="" class="dark-logo" />
 					<img
-						src="/back/vendors/images/deskapp-logo-white.svg"
+						src="/images/site/{{ get_settings()->site_logo }}"
 						alt=""
 						class="light-logo"
 					/>
@@ -454,10 +444,17 @@
 								<div class="slider-small-cap">Settings</div>
 							</li>
 							<li>
-								<a href="{{ route('admin.profile') }}" class="dropdown-toggle no-arrow {{ Route::is
+								<a href="{{ route('admin.profile') }}" 
+								class="dropdown-toggle no-arrow {{ Route::is
 								('admin.profile') ? 'active' : '' }}">
 									<span class="micon fa fa-user"></span>
 									<span class="mtext">Profile</span>
+								</a>
+							</li>
+							<li>
+								<a href="{{ route('admin.settings') }}" class="dropdown-toggle no-arrow {{ Route::is('admin.settings') ? 'active' : ''}}">
+									<span class="micon icon-copy fi-widget"></span>
+									<span class="mtext">Settings</span>
 								</a>
 							</li>
 						@else
@@ -480,7 +477,7 @@
 								<div class="slider-small-cap">Settings</div>
 							</li>
 							<li>
-								<a href="{{ route('admin.profile') }}" class="dropdown-toggle no-arrow">
+								<a href="{{ route('admin.profile') }}" class="dropdown-toggle no-arrow {{ Route::is('admin.profile') ? 'active' : ''}}">
 									<span class="micon fa fa-user"></span>
 									<span class="mtext">Profile</span>
 								</a>
