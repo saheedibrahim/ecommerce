@@ -51,6 +51,9 @@
 		<!-- End Google Tag Manager -->
 		<link rel="stylesheet" href="/extra-assets">
 		<link rel="stylesheet" href="/extra-assets/ijaboCropTool/ijaboCropTool.min.css">
+		<link rel="stylesheet" href="/extra-assets/jquery-ui-1.14.1/jquery-ui.min.js">
+		<link rel="stylesheet" href="/extra-assets/jquery-ui-1.14.1/jquery-ui.structure.min.css">
+		<link rel="stylesheet" href="/extra-assets/jquery-ui-1.14.1/jquery-ui.theme.min.css">
 		@livewireStyles
         @stack('stylesheets')
 	</head>
@@ -432,6 +435,13 @@
 								</a>
 							</li>
 							<li>
+								<a href="{{ route('admin.manage-categories.cats-subcats-list') }}" class="dropdown-toggle no-arrow 
+								{{ Route::is('admin.manage-categories.*') ? 'active' : ''  }}">
+									<i class="micon bi bi-list-columns-reverse"></i>
+									<span class="mtext">Manage Categories</span>
+								</a>
+							</li>
+							<li>
 								<a href="{{ route('admin.home') }}" class="dropdown-toggle no-arrow">
 									<span class="micon bi bi-receipt-cutoff"></span>
 									<span class="mtext">Invoice</span>
@@ -511,6 +521,7 @@
 		<script src="/back/vendors/scripts/script.min.js"></script>
 		<script src="/back/vendors/scripts/process.js"></script>
 		<script src="/back/vendors/scripts/layout-settings.js"></script>
+		<script src="/extra-assets/jquery-ui-1.14.1/jquery-ui.min.js"></script>
 
 		<script>
 		if (navigator.userAgent.indexOf("Firefox") != -1) {

@@ -70,31 +70,30 @@
             <div class="footer-logo-wrap pt-50 pb-35">
                 <div class="row">
                     <!-- Begin Footer Logo Area -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="footer-logo">
-                            <img src="/front/images/menu/logo/1.jpg" alt="Footer Logo">
-                            <p class="info">
-                                We are a team of designers and developers that create high quality HTML Template & Woocommerce, Shopify Theme.
-                            </p>
+                            <img src="/images/site/logo/{{ get_settings()->site_logo }}" alt="Footer Logo">
+                            <p class="info">{{ get_settings()->site_meta_description }}</p>
                         </div>
                         <ul class="des">
                             <li>
-                                <span>Address: </span>
-                                6688Princess Road, London, Greater London BAS 23JK, UK
+                                <i class="bi bi-house-door"></i>
+                                <a href="http://maps.google.com/maps?q={{ urlencode(get_settings()->site_address) }}"
+                                    target="_blank" class="ms-2">{{ get_settings()->site_address }}</a>
                             </li>
                             <li>
                                 <span>Phone: </span>
                                 <a href="#">(+123) 123 321 345</a>
                             </li>
                             <li>
-                                <span>Email: </span>
-                                <a href="mailto://info@yourdomain.com">info@yourdomain.com</a>
+                                <i class="bi bi-envelope-at"></i>
+                                <a href="mailto:{{ get_settings()->site_email }}" class="ms-2">{{ get_settings()->site_email }}</a>
                             </li>
                         </ul>
                     </div>
                     <!-- Footer Logo Area End Here -->
                     <!-- Begin Footer Block Area -->
-                    <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="footer-block">
                             <h3 class="footer-block-title">Product</h3>
                             <ul>
@@ -107,7 +106,7 @@
                     </div>
                     <!-- Footer Block Area End Here -->
                     <!-- Begin Footer Block Area -->
-                    <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="footer-block">
                             <h3 class="footer-block-title">Our company</h3>
                             <ul>
@@ -120,7 +119,7 @@
                     </div>
                     <!-- Footer Block Area End Here -->
                     <!-- Begin Footer Block Area -->
-                    <div class="col-lg-4">
+                    {{-- <div class="col-lg-3">
                         <div class="footer-block">
                             <h3 class="footer-block-title">Follow Us</h3>
                             <ul class="social-link">
@@ -169,6 +168,42 @@
                             </form>
                         </div>
                         <!-- Footer Newsletter Area End Here -->
+                    </div> --}}
+                    <!-- Footer Block Area End Here -->
+                    <!-- Begin Footer Block Area -->
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="footer-block">
+                            <h3 class="footer-block-title">Contact Us</h3>
+                            <ul>
+                                <li>
+                                    <div class="footer-number">
+                                        <p>Do you have any question or suggestion?</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="footer-number">
+                                        <div class="d-flex">
+                                            <i class="bi bi-telephone"></i>
+                                            <p class="ms-3">
+                                                <h6 class="text-content">Hotline 24/7 :</h6>
+                                                <h5 class="ms-2">{{ get_settings()->site_phone }}</h5>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="footer-number">
+                                        <div class="d-flex">
+                                            <i class="bi bi-envelope-at"></i>
+                                            <p class="mx-0 ms-3 px-0">
+                                                <h6 class="text-content">Email Address :</h6>
+                                                <h5 class="ms-2">{{ get_settings()->site_email }}</h5>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <!-- Footer Block Area End Here -->
                 </div>
@@ -179,46 +214,58 @@
     <!-- Begin Footer Static Bottom Area -->
     <div class="footer-static-bottom pt-55 pb-55">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Begin Footer Links Area -->
-                    <div class="footer-links">
-                        <ul>
-                            <li><a href="#">Online Shopping</a></li>
-                            <li><a href="#">Promotions</a></li>
-                            <li><a href="#">My Orders</a></li>
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#">Customer Service</a></li>
-                            <li><a href="#">Support</a></li>
-                            <li><a href="#">Most Populars</a></li>
-                            <li><a href="#">New Arrivals</a></li>
-                            <li><a href="#">Special Products</a></li>
-                            <li><a href="#">Manufacturers</a></li>
-                            <li><a href="#">Our Stores</a></li>
-                            <li><a href="#">Shipping</a></li>
-                            <li><a href="#">Payments</a></li>
-                            <li><a href="#">Warantee</a></li>
-                            <li><a href="#">Refunds</a></li>
-                            <li><a href="#">Checkout</a></li>
-                            <li><a href="#">Discount</a></li>
-                            <li><a href="#">Refunds</a></li>
-                            <li><a href="#">Policy Shipping</a></li>
+            <div class="row">                
+                <!-- Begin Footer Block Area -->
+                <div class="col-lg-4 col-md-3 col-sm-6">
+                    <p>&copy; 2025 Saidtraverse. All rights reserved.</p>
+                </div>
+                <!-- Footer Block Area End Here -->
+                <!-- Begin Footer Payment Area -->
+                <div class="col-lg-4 text-center">
+                    <a href="#">
+                        <img src="/front/images/payment/1.png" alt="">
+                    </a>
+                </div>
+                <!-- Footer Payment Area End Here -->
+                <!-- Begin Footer Block Area -->
+                <div class="col-lg-4 col-md-3 col-sm-6">
+                    <div class="d-flex">
+                        <h6 class="m-0 p-0">Stay Connected :</h6>
+                        <ul class=" d-flex">
+                            <li class="me-1">
+                                <a href="{{ get_social_network()->facebook_url }}" target="_blank">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="mx-1">
+                                <a href="{{ get_social_network()->twitter_url }}" target="_blank">
+                                    <i class="bi bi-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="mx-1">
+                                <a href="{{ get_social_network()->instagram_url }}" target="_blank">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="mx-1">
+                                <a href="{{ get_social_network()->yputube_url }}" target="_blank">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </li>
+                            <li class="mx-1">
+                                <a href="{{ get_social_network()->facebook_url }}" target="_blank">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="mx-1">
+                                <a href="{{ get_social_network()->facebook_url }}" target="_blank">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                            </li>
                         </ul>
                     </div>
-                    <!-- Footer Links Area End Here -->
-                    <!-- Begin Footer Payment Area -->
-                    <div class="copyright text-center">
-                        <a href="#">
-                            <img src="/front/images/payment/1.png" alt="">
-                        </a>
-                    </div>
-                    <!-- Footer Payment Area End Here -->
-                    <!-- Begin Copyright Area -->
-                    <div class="copyright text-center pt-25">
-                        <span><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></span>
-                    </div>
-                    <!-- Copyright Area End Here -->
                 </div>
+                <!-- Footer Block Area End Here -->
             </div>
         </div>
     </div>

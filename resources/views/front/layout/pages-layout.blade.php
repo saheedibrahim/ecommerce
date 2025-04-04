@@ -2,7 +2,7 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
     
-<!-- index28:48-->
+<!-- index-331:38-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -10,9 +10,9 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="/front/images/favicon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
         <!-- Material Design Iconic Font-V2.2.0 -->
-        <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="/front/css/material-design-iconic-font.min.css">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="/front/css/font-awesome.min.css">
         <!-- Font Awesome Stars-->
@@ -45,6 +45,10 @@
         <script src="/front/js/vendor/modernizr-2.8.3.min.js"></script>
         @livewireStyles()
         @stack('stylesheets')
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
     </head>
     <body>
     <!--[if lt IE 8]>
@@ -73,7 +77,7 @@
                                 <div class="col-lg-5 col-md-6 col-sm-6">
                                    <!-- Product Details Left -->
                                     <div class="product-details-left">
-                                        <div class="product-details-/front/images slider-navigation-1">
+                                        <div class="product-details-images slider-navigation-1">
                                             <div class="lg-image">
                                                 <img src="/front/images/product/large-size/1.jpg" alt="product image">
                                             </div>
@@ -195,8 +199,8 @@
         <script src="/front/js/jquery.magnific-popup.min.js"></script>
         <!-- Isotope js -->
         <script src="/front/js/isotope.pkgd.min.js"></script>
-        <!-- /front/imagesloaded js -->
-        <script src="/front/js//front/imagesloaded.pkgd.min.js"></script>
+        <!-- Imagesloaded js -->
+        <script src="/front/js/imagesloaded.pkgd.min.js"></script>
         <!-- Mixitup js -->
         <script src="/front/js/jquery.mixitup.min.js"></script>
         <!-- Countdown -->
@@ -217,9 +221,13 @@
         <script src="/front/js/scrollUp.min.js"></script>
         <!-- Main/Activator js -->
         <script src="/front/js/main.js"></script>
+        
         @livewireScripts()
         @stack('scripts')
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
     </body>
 
-<!-- index30:23-->
+<!-- index-331:41-->
 </html>

@@ -75,7 +75,7 @@
                 </div>
                 <!-- Header Logo Area End Here -->
                 <!-- Begin Header Middle Right Area -->
-                <div class="col-lg-9 pl-0 ml-sm-15 ml-xs-15">
+                <div class="col-lg-9">
                     <!-- Begin Header Middle Searchbox Area -->
                     <form action="#" class="hm-searchbox">
                         <select class="nice-select select-search-category">
@@ -138,7 +138,7 @@
                             <option value="71">- - - -  7.0 Screen</option>                     
                             <option value="72">- - - -  9.0 Screen</option>                     
                             <option value="73">- - - -  Bags &amp; Cases</option>                   
-                            <option value="67">- -  XailStation</option>                     
+                            <option value="67">- -  Meito</option>                     
                             <option value="74">- - - -  Batteries</option>                      
                             <option value="75">- - - -  Microphones</option>                        
                             <option value="76">- - - -  Stabilizers</option>                        
@@ -178,35 +178,35 @@
                                     <ul class="minicart-product-list">
                                         <li>
                                             <a href="single-product.html" class="minicart-product-image">
-                                                <img src="/front/images/product/small-size/5.jpg" alt="cart products">
+                                                <img src="/front/images/product/small-size/1.jpg" alt="cart products">
                                             </a>
                                             <div class="minicart-product-details">
                                                 <h6><a href="single-product.html">Aenean eu tristique</a></h6>
                                                 <span>£40 x 1</span>
                                             </div>
-                                            <button class="close" title="Remove">
+                                            <button class="close">
                                                 <i class="fa fa-close"></i>
                                             </button>
                                         </li>
                                         <li>
                                             <a href="single-product.html" class="minicart-product-image">
-                                                <img src="/front/images/product/small-size/6.jpg" alt="cart products">
+                                                <img src="/front/images/product/small-size/2.jpg" alt="cart products">
                                             </a>
                                             <div class="minicart-product-details">
                                                 <h6><a href="single-product.html">Aenean eu tristique</a></h6>
                                                 <span>£40 x 1</span>
                                             </div>
-                                            <button class="close" title="Remove">
+                                            <button class="close">
                                                 <i class="fa fa-close"></i>
                                             </button>
                                         </li>
                                     </ul>
                                     <p class="minicart-total">SUBTOTAL: <span>£80.00</span></p>
                                     <div class="minicart-button">
-                                        <a href="shopping-cart.html" class="li-button li-button-fullwidth li-button-dark">
+                                        <a href="checkout.html" class="li-button li-button-dark li-button-fullwidth li-button-sm">
                                             <span>View Full Cart</span>
                                         </a>
-                                        <a href="checkout.html" class="li-button li-button-fullwidth">
+                                        <a href="checkout.html" class="li-button li-button-fullwidth li-button-sm">
                                             <span>Checkout</span>
                                         </a>
                                     </div>
@@ -223,19 +223,151 @@
     </div>
     <!-- Header Middle Area End Here -->
     <!-- Begin Header Bottom Area -->
-    <div class="header-bottom header-sticky d-none d-lg-block d-xl-block">
+    <div class="header-bottom header-sticky stick d-none d-lg-block d-xl-block">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <!-- Begin Category Menu Area -->
+                <div class="col-lg-3">
+                    <!--Category Menu Start-->
+                    <div class="category-menu category-menu-2">
+                        <div class="category-heading">
+                            <h2 class="categories-toggle"><span>categories</span></h2>
+                        </div>
+                        <div id="cate-toggle" class="category-menu-list">
+                            <ul>
+                                <li class="right-menu"><a href="shop-left-sidebar.html">Laptops</a>
+                                    <ul class="cat-mega-menu">
+                                        <li class="right-menu cat-mega-title">
+                                           <a href="shop-left-sidebar.html">Prime Video</a>
+                                            <ul>
+                                                <li><a href="#">All Videos</a></li>
+                                                <li><a href="#">Blouses</a></li>
+                                                <li><a href="#">Evening Dresses</a></li>
+                                                <li><a href="#">Summer Dresses</a></li>
+                                                <li><a href="#">T-shirts</a></li>
+                                                <li><a href="#">Rent or Buy</a></li>
+                                                <li><a href="#">Your Watchlist</a></li>
+                                                <li><a href="#">Watch Anywhere</a></li>
+                                                <li><a href="#">Getting Started</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="right-menu cat-mega-title">
+                                           <a href="shop-left-sidebar.html">Computers</a>
+                                            <ul>
+                                                <li><a href="#">More to Explore</a></li>
+                                                <li><a href="#">TV & Video</a></li>
+                                                <li><a href="#">Audio & Theater</a></li>
+                                                <li><a href="#">Camera, Photo</a></li>
+                                                <li><a href="#">Cell Phones</a></li>
+                                                <li><a href="#">Headphones</a></li>
+                                                <li><a href="#">Video Games</a></li>
+                                                <li><a href="#">Wireless Speakers</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="right-menu cat-mega-title">
+                                           <a href="shop-left-sidebar.html">Electronics</a>
+                                            <ul>
+                                                <li><a href="#">Amazon Home</a></li>
+                                                <li><a href="#">Kitchen & Dining</a></li>
+                                                <li><a href="#">Furniture</a></li>
+                                                <li><a href="#">Bed & Bath</a></li>
+                                                <li><a href="#">Appliances</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="right-menu"><a href="shop-left-sidebar.html">TV & Audio</a>
+                                    <ul class="cat-mega-menu">
+                                        <li class="right-menu cat-mega-title">
+                                           <a href="shop-left-sidebar.html">Chamcham</a>
+                                            <ul>
+                                                <li><a href="#">Office</a></li>
+                                                <li><a href="#">Gaming</a></li>
+                                                <li><a href="#">Chromebook</a></li>
+                                                <li><a href="#">Refurbished</a></li>
+                                                <li><a href="#">Touchscreen</a></li>
+                                                <li><a href="#">Ultrabooks</a></li>
+                                                <li><a href="#">Netbook</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="right-menu cat-mega-title">
+                                           <a href="shop-left-sidebar.html">Sanai</a>
+                                            <ul>
+                                                <li><a href="#">Hard Drives</a></li>
+                                                <li><a href="#">Graphic Cards</a></li>
+                                                <li><a href="#">Processors (CPU)</a></li>
+                                                <li><a href="#">Memory</a></li>
+                                                <li><a href="#">Motherboards</a></li>
+                                                <li><a href="#">Fans & Cooling</a></li>
+                                                <li><a href="#">CD/DVD Drives</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="right-menu cat-mega-title">
+                                           <a href="shop-left-sidebar.html">Meito</a>
+                                            <ul>
+                                                <li><a href="#">Sound Cards</a></li>
+                                                <li><a href="#">Cases & Towers</a></li>
+                                                <li><a href="#">Casual Dresses</a></li>
+                                                <li><a href="#">Evening Dresses</a></li>
+                                                <li><a href="#">T-shirts</a></li>
+                                                <li><a href="#">Tops</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="right-menu"><a href="shop-left-sidebar.html">Smartphone</a>
+                                    <ul class="cat-mega-menu cat-mega-menu-2">
+                                        <li class="right-menu cat-mega-title">
+                                           <a href="shop-left-sidebar.html">Camera Accessories</a>
+                                            <ul>
+                                                <li><a href="#">Octa Core</a></li>
+                                                <li><a href="#">Quad Core</a></li>
+                                                <li><a href="#">Dual Core</a></li>
+                                                <li><a href="#">7.0 Screen</a></li>
+                                                <li><a href="#">9.0 Screen</a></li>
+                                                <li><a href="#">Bags & Cases</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="right-menu cat-mega-title">
+                                           <a href="shop-left-sidebar.html">Meito</a>
+                                            <ul>
+                                                <li><a href="#">Batteries</a></li>
+                                                <li><a href="#">Microphones</a></li>
+                                                <li><a href="#">Stabilizers</a></li>
+                                                <li><a href="#">Video Tapes</a></li>
+                                                <li><a href="#">Memory Card Readers</a></li>
+                                                <li><a href="#">Tripods</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Cameras</a></li>
+                                <li><a href="#">Headphone</a></li>
+                                <li><a href="#">Smartwatch</a></li>
+                                <li><a href="#">Out Door Room</a></li>
+                                <li><a href="#">Chamcham</a></li>
+                                <li class="rx-child"><a href="#">Mobile & Tablets</a></li>
+                                <li class="rx-child"><a href="#">Accessories</a></li>
+                                <li class="rx-parent">
+                                    <a class="rx-default">More Categories</a>
+                                    <a class="rx-show">Less Categories</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--Category Menu End-->
+                </div>
+                <!-- Category Menu Area End Here -->
+                <div class="col-lg-9">
                     <!-- Begin Header Bottom Menu Area -->
-                    <div class="hb-menu">
+                    <div class="hb-menu hb-menu-2">
                         <nav>
                             <ul>
                                 <li class="dropdown-holder"><a href="index.html">Home</a>
                                     <ul class="hb-dropdown">
-                                        <li class="active"><a href="index.html">Home One</a></li>
+                                        <li><a href="index.html">Home One</a></li>
                                         <li><a href="index-2.html">Home Two</a></li>
-                                        <li><a href="index-3.html">Home Three</a></li>
+                                        <li class="active"><a href="index-3.html">Home Three</a></li>
                                         <li><a href="index-4.html">Home Four</a></li>
                                     </ul>
                                 </li>
@@ -348,8 +480,11 @@
                                 </li>
                                 <li><a href="about-us.html">About Us</a></li>
                                 <li><a href="contact.html">Contact</a></li>
-                                <li><a href="shop-left-sidebar.html">Smartwatch</a></li>
-                                <li><a href="shop-left-sidebar.html">Accessories</a></li>
+                                <!-- Begin Header Bottom Menu Information Area -->
+                                {{-- <li class="hb-info f-right p-0 d-sm-none d-lg-block">
+                                    <span>6688 London, Greater London BAS 23JK, UK</span>
+                                </li> --}}
+                                <!-- Header Bottom Menu Information Area End Here -->
                             </ul>
                         </nav>
                     </div>

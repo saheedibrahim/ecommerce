@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoriesController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,5 +23,15 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::view('/settings', 'back.pages.settings')->name('settings');
         Route::post('/change-logo', [AdminController::class, 'changeLogo'])->name('change-logo');
         Route::post('/change-favicon', [AdminController::class, 'changeFavicon'])->name('change-favicon');
+
+        Route::prefix('manage-categories')->name('manage-categories.')->group(function(){
+            Route::controller(CategoriesController::class)->group(function(){
+                Route::get('/', 'catSubcatList')->name('cats-subcats-list');
+                Route::get('/add-category', 'addCategory')->name('add-category');
+                Route::post('/store-category', 'storeCategory')->name('store-category');
+                Route::get('/edit-category', 'editCategory')->name('edit-category');
+                Route::post('/update-category', 'updateCategory')->name('update-category');
+            });
+        });
     });
 });

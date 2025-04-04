@@ -71,6 +71,14 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label for="">Site Address</label>
+                        <input type="text" class="form-control" placeholder="Enter site address"
+                        wire:model.defer="site_address">
+                        @error('site_address')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+                    <div class="form-group">
                         <label for="">Site meta description</label>
                         <textarea cols="4" rows="4" placeholder="Site media desc..........." 
                         class="form-control" wire:model.defer='site_meta_description'></textarea>
