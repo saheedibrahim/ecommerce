@@ -51,11 +51,16 @@
 		<!-- End Google Tag Manager -->
 		<link rel="stylesheet" href="/extra-assets">
 		<link rel="stylesheet" href="/extra-assets/ijaboCropTool/ijaboCropTool.min.css">
-		<link rel="stylesheet" href="/extra-assets/jquery-ui-1.14.1/jquery-ui.min.js">
+		<link rel="stylesheet" href="/extra-assets/jquery-ui-1.14.1/jquery-ui.min.css">
 		<link rel="stylesheet" href="/extra-assets/jquery-ui-1.14.1/jquery-ui.structure.min.css">
 		<link rel="stylesheet" href="/extra-assets/jquery-ui-1.14.1/jquery-ui.theme.min.css">
 		@livewireStyles
         @stack('stylesheets')
+		<style>
+			.swal2-popup{
+				font-size: 0.78em;
+			}
+		</style>
 	</head>
 	<body>
 		{{-- <div class="pre-loader">
@@ -521,7 +526,6 @@
 		<script src="/back/vendors/scripts/script.min.js"></script>
 		<script src="/back/vendors/scripts/process.js"></script>
 		<script src="/back/vendors/scripts/layout-settings.js"></script>
-		<script src="/extra-assets/jquery-ui-1.14.1/jquery-ui.min.js"></script>
 
 		<script>
 		if (navigator.userAgent.indexOf("Firefox") != -1) {
@@ -532,6 +536,7 @@
 		}
 		</script>
 		<script src="/extra-assets/ijaboCropTool/ijaboCropTool.min.js"></script>
+		<script src="/extra-assets/jquery-ui-1.14.1/jquery-ui.min.js"></script>
 		<script>
 			window.addEventListener('showtoastr', function(event)){
 				toastr.remove();
