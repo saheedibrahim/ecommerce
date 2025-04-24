@@ -4,7 +4,7 @@
     @livewire('admin-categories-subcategories-list')
 @endsection
 
-{{-- @push('scripts')
+@push('scripts')
     <script>
         $('table tbody#sortable_categories').sortable({
             cursor: "move",
@@ -20,11 +20,11 @@
                     $(this).removeClass("updated");
                 });
                 // alert(positions);
-                window.livewire.emit('updateCategoriesOrdering', positions);
+                Livewire.dispatch('updateCategoriesOrdering', [positions]);
             }
         });
     </script>
-@endpush --}}
+@endpush
 
 
 @push('scripts')
@@ -47,9 +47,45 @@
         }).then(function(result){
             if (result.value) {
                 // alert('Yes, delete category');
-                window.livewire.emit('deleteCategory', category_id);
+                Livewire.dispatch('deleteCategory', [category_id]);
             }
         });
+    });
+    
+    $('table tbody#sortable_subcategories').sortable({
+        cursor: "move",
+        update: function(event,ui){
+            $(this).children().each(function(index){
+                if ($(this).attr("data-ordering") != (index+1)) {
+                    $(this).attr("data-ordering", (index+1)).addClass("updated");
+                }
+            });
+            var positions = [];
+            $(".updated").each(function(){
+                positions.push([$(this).attr("data-index"),$(this).attr("data-ordering")]);
+                $(this).removeClass("updated");
+            });
+            // alert(positions);
+            Livewire.dispatch('updateSubCategoriesOrdering', [positions]);
+        }
+    });
+    
+    $('table tbody#sortable_child_subcategories').sortable({
+        cursor: "move",
+        update: function(event,ui){
+            $(this).children().each(function(index){
+                if ($(this).attr("data-ordering") != (index+1)) {
+                    $(this).attr("data-ordering", (index+1)).addClass("updated");
+                }
+            });
+            var positions = [];
+            $(".updated").each(function(){
+                positions.push([$(this).attr("data-index"),$(this).attr("data-ordering")]);
+                $(this).removeClass("updated");
+            });
+            // alert(positions);
+            Livewire.dispatch('updateChildSubCategoriesOrdering', [positions]);
+        }
     });
 
     
@@ -72,7 +108,7 @@
         }).then(function(result){
             if (result.value) {
                 // alert('Yes, Delete sub category');
-                window.livewire.emit("deleteSubCategory", subcategory_id);
+                Livewire.dispatch("deleteSubCategory", [subcategory_id]);
             }
         })
     });

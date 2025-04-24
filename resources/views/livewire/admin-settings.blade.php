@@ -99,7 +99,7 @@
                                 <img wire:ignore src="" class="img-thumbnail" data-ijabo-default-img="/
                                 images/site/{{ $site_logo}}" id="site_logo_image_preview" alt="">
                             </div>
-                            <form action="" method="post" enctype="multipart/form-data" id="change_site_logo_form">
+                            <form action="{{ route('admin/change-logo') }}" method="post" enctype="multipart/form-data" id="change_site_logo_form">
                                 @csrf
                                 <div class="mb-2">
                                     <input type="file" name="site_logo" id="site_logo" class="form-control">

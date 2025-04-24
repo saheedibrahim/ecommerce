@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Middleware\PreventBackHistory;
+use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Middleware\RoleManager;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
@@ -34,7 +35,8 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {      
         $middleware->alias([
             'rolemanager' => RoleManager::class,
-            'preventbackhistory' => PreventBackHistory::class
+            'preventbackhistory' => PreventBackHistory::class,
+            'RedirectIfAuthenticated' => RedirectIfAuthenticated::class
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

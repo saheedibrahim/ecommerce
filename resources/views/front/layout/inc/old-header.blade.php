@@ -249,21 +249,42 @@
                                                 <ul class="cat-mega-menu">
                                                     <li class="right-menu cat-mega-title">
                                                         @foreach ($category->subcategories as $subcategory)
-                                                            @if ( $subcategory->is_child_of == 0 )
-                                                                <a href="shop-left-sidebar.html">
-                                                                    <h5>{{ $subcategory->subcategory_name}}</h5>
-                                                                </a>
-                                                                @if ( count($subcategory->children) > 0 )
-                                                                    <ul>
-                                                                        @foreach ( $subcategory->children as $child_subcategory  )
-                                                                            <li>
-                                                                                <a href="javascript:void(0)">{{ $child_subcategory->subcategory_name }}</a>
-                                                                            </li>                                                                        
-                                                                        @endforeach
-                                                                    </ul>                                                                
-                                                                @endif                                                           
-                                                            @endif                                                          
+                                                            <a href="shop-left-sidebar.html">Prime Video</a>
+                                                            <ul>
+                                                                <li><a href="#">All Videos</a></li>
+                                                                <li><a href="#">Blouses</a></li>
+                                                                <li><a href="#">Evening Dresses</a></li>
+                                                                <li><a href="#">Summer Dresses</a></li>
+                                                                <li><a href="#">T-shirts</a></li>
+                                                                <li><a href="#">Rent or Buy</a></li>
+                                                                <li><a href="#">Your Watchlist</a></li>
+                                                                <li><a href="#">Watch Anywhere</a></li>
+                                                                <li><a href="#">Getting Started</a></li>
+                                                            </ul>                                                            
                                                         @endforeach
+                                                    </li>
+                                                    <li class="right-menu cat-mega-title">
+                                                    <a href="shop-left-sidebar.html">Computers</a>
+                                                        <ul>
+                                                            <li><a href="#">More to Explore</a></li>
+                                                            <li><a href="#">TV & Video</a></li>
+                                                            <li><a href="#">Audio & Theater</a></li>
+                                                            <li><a href="#">Camera, Photo</a></li>
+                                                            <li><a href="#">Cell Phones</a></li>
+                                                            <li><a href="#">Headphones</a></li>
+                                                            <li><a href="#">Video Games</a></li>
+                                                            <li><a href="#">Wireless Speakers</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="right-menu cat-mega-title">
+                                                    <a href="shop-left-sidebar.html">Electronics</a>
+                                                        <ul>
+                                                            <li><a href="#">Amazon Home</a></li>
+                                                            <li><a href="#">Kitchen & Dining</a></li>
+                                                            <li><a href="#">Furniture</a></li>
+                                                            <li><a href="#">Bed & Bath</a></li>
+                                                            <li><a href="#">Appliances</a></li>
+                                                        </ul>
                                                     </li>
                                                 </ul>                                                
                                             @endif

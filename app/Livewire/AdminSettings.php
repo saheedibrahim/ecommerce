@@ -10,7 +10,7 @@ class AdminSettings extends Component
 {
     public $tab = null;
     public $default_tab = 'general_settings';
-    protected $queryString = ['tab'];
+    protected $queryString = ['tab' => ['keep' => true]];
     public $site_name, $site_email, $site_phone, $site_meta_keywords, $site_meta_description, $site_logo, $site_favicon, $site_address;
     public $facebook_url, $twitter_url, $instagram_url, $youtube_url, $github_url, $linkedin_url;
 
@@ -77,10 +77,17 @@ class AdminSettings extends Component
         $update = $social_network->save();
 
         if ($update) {
-            // $this->showToastr('success', 'Social network have been succeessfully updated');
+            $this->showToastr('success', 'Social network have been succeessfully updated');
         } else {
-            // $this->showToastr('error', 'Something went wrong Try again later.');
+            $this->showToastr('error', 'Something went wrong Try again later.');
         }
+    }
+
+    public function showToastr($type, $message){
+        return $this->dispatch('showToastr', [
+            'type' => $type,
+            'message' => $message
+        ]);
     }
 
     public function render()

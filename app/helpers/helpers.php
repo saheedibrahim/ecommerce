@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Category;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use App\Models\GeneralSetting;
@@ -78,5 +79,14 @@ if (!function_exists('get_social_network')) {
             $results = $new_social_network_data;
         }
         return $results;
+    }
+}
+
+//FRONTEND::
+/** GET FRONTEND CATEGORIES */
+if (!function_exists('get_categories')) {
+    function get_categories(){
+        $categories = Category::with('subcategories')->orderBy('ordering', 'asc')->get();
+        return !empty($categories) ? $categories : [];
     }
 }

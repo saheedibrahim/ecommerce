@@ -540,11 +540,11 @@
 		<script>
 			window.addEventListener('showtoastr', function(event)){
 				toastr.remove();
-				if (event.detail.type === 'info') {toastr.info(event.detail.message);}
-				else if (event.detail.type === 'success') {toastr.success(event.detail.message);}
-				else if (event.detail.type === 'error') {toastr.error(event.detail.message);}
-				else if (event.detail.type === 'warning') {toastr.warning(event.detail.message);}
-				else { return false;}
+				if (event.detail[0].type == 'info') { toastr.info(event.detail[0].message); }
+				else if (event.detail[0].type == 'success') { toastr.success(event.detail[0].message); }
+				else if (event.detail[0].type == 'error') { toastr.error(event.detail[0].message); }
+				else if (event.detail[0].type == 'warning') { toastr.warning(event.detail[0].message); }
+				else { return false; }
 			}
 		</script>
 

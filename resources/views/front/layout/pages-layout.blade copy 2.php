@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     <!-- Scripts -->
-    {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
+    <script src="{{ asset('js/app.js') }}" defer></script>
 
     @livewireStyles
 </head>
@@ -25,20 +25,20 @@
                     <div class="flex">
                         <!-- Logo -->
                         <div class="shrink-0 flex items-center">
-                            <a href="" class="text-xl font-bold text-indigo-600">
+                            <a href="{{ route('home') }}" class="text-xl font-bold text-indigo-600">
                                 MultiVendor
                             </a>
                         </div>
 
                         <!-- Navigation Links -->
                         <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                            <a href="" class="inline-flex items-center px-1 pt-1 border-b-2 border-indigo-400 text-sm font-medium leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition">
+                            <a href="{{ route('home') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-indigo-400 text-sm font-medium leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition">
                                 Home
                             </a>
-                            <a href="" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition">
+                            <a href="{{ route('shop') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition">
                                 Shop
                             </a>
-                            <a href="" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition">
+                            <a href="{{ route('vendors') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition">
                                 Vendors
                             </a>
                         </div>
@@ -75,20 +75,20 @@
                                                 Manage Account
                                             </div>
 
-                                            <a href="" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition">
+                                            <a href="{{ route('profile.show') }}" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition">
                                                 Profile
                                             </a>
 
                                             @if(Auth::user()->isVendor())
-                                                <a href="" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition">
+                                                <a href="{{ route('vendor.dashboard') }}" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition">
                                                     Vendor Dashboard
                                                 </a>
                                             @endif
 
                                             <!-- Authentication -->
-                                            <form method="POST" action="">
+                                            <form method="POST" action="{{ route('logout') }}">
                                                 @csrf
-                                                <a href=""
+                                                <a href="{{ route('logout') }}"
                                                    onclick="event.preventDefault(); this.closest('form').submit();"
                                                    class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition">
                                                     Log Out
@@ -99,8 +99,8 @@
                                 </div>
                             @else
                                 <div class="space-x-4">
-                                    <a href="" class="text-sm text-gray-700 underline">Log in</a>
-                                    <a href="" class="text-sm text-gray-700 underline">Register</a>
+                                    <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
+                                    <a href="{{ route('register') }}" class="text-sm text-gray-700 underline">Register</a>
                                 </div>
                             @endauth
                         </div>
@@ -108,12 +108,12 @@
 
                     <!-- Shopping Cart -->
                     <div class="hidden sm:flex sm:items-center sm:ml-6">
-                        <a href="" class="flex items-center text-gray-500 hover:text-gray-700">
+                        <a href="{{ route('cart') }}" class="flex items-center text-gray-500 hover:text-gray-700">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                             </svg>
                             <span class="ml-1">
-                                {{-- @livewire('cart-counter') --}}
+                                @livewire('cart-counter')
                             </span>
                         </a>
                     </div>
@@ -130,15 +130,9 @@
             </div>
         </header>
 
-        <section>
-            
-            {{-- @include('front.layout.inc.header') --}}
-        </section>
-
         <!-- Page Content -->
         <main>
-            {{-- {{ $slot }} --}}
-            @yield('content')
+            {{ $slot }}
         </main>
 
         <!-- Footer -->
@@ -156,17 +150,17 @@
                             <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Quick Links</h3>
                             <ul class="mt-4 space-y-4">
                                 <li>
-                                    <a href="" class="text-base text-gray-500 hover:text-gray-900">
+                                    <a href="{{ route('home') }}" class="text-base text-gray-500 hover:text-gray-900">
                                         Home
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" class="text-base text-gray-500 hover:text-gray-900">
+                                    <a href="{{ route('shop') }}" class="text-base text-gray-500 hover:text-gray-900">
                                         Shop
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" class="text-base text-gray-500 hover:text-gray-900">
+                                    <a href="{{ route('vendors') }}" class="text-base text-gray-500 hover:text-gray-900">
                                         Vendors
                                     </a>
                                 </li>
@@ -176,17 +170,17 @@
                             <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Support</h3>
                             <ul class="mt-4 space-y-4">
                                 <li>
-                                    <a href="" class="text-base text-gray-500 hover:text-gray-900">
+                                    <a href="{{ route('contact') }}" class="text-base text-gray-500 hover:text-gray-900">
                                         Contact Us
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" class="text-base text-gray-500 hover:text-gray-900">
+                                    <a href="{{ route('faq') }}" class="text-base text-gray-500 hover:text-gray-900">
                                         FAQ
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" class="text-base text-gray-500 hover:text-gray-900">
+                                    <a href="{{ route('privacy') }}" class="text-base text-gray-500 hover:text-gray-900">
                                         Privacy Policy
                                     </a>
                                 </li>
